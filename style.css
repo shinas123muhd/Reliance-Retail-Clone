@@ -4,11 +4,11 @@
     list-style: none;
 }
 .container{
+    display: contents;
     height: 5rem;
     width: 100%;
     background: white;
     position: fixed;
-    overflow: hidden;
     
 }
 .header{
@@ -34,13 +34,110 @@
 .navbar li a{
     color: black;
 }
-.container2{
-    height: 650px;
+
+.slider-container {
+    
+    position: relative;
     width: 100%;
-    background: aqua;
+    overflow: hidden;
+    height: 100%;
+    
     
 
 }
+
+.section {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+.slider-wrapper {
+    position: relative;
+
+    display: inline-flex;
+}
+
+.slider {
+    display: block;
+    width: 100vw !important;
+    animation: slide 15s infinite;
+    
+}
+
+
+.slider-body {
+    height: 100%;
+    
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 45;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    display: flex !important;
+}
+
+
+
+.slider-body img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    flex: 1 1 100%;
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    55% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-200%);
+    }
+
+    80% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+
 .slide1{
     width: 100%;
     height: 650px;
